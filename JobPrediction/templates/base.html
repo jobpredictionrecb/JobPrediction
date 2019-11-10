@@ -35,7 +35,29 @@
             background-color: #1E90FF;
             color: white;
         }
+        .icon {
+  transition: 0.70s;
+  -webkit-transition: 0.50s;
+  -moz-transition: 0.50s;
+  -ms-transition: 0.50s;
+  -o-transition: 0.50s;
 
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon:hover {
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
     </style>
 </head>
 <body onload="loaderHide()">
@@ -73,7 +95,7 @@
                     <a class="nav-link btn" href="{% url 'accounts:logout' %}">Logout</a>
                 </li>
                 <li class="nav-item active ml-2">
-                    <a class="nav-link" href="/">Welcome , {{ user.first_name }} {{ user.last_name }}</a>
+                    <a class="nav-link" href="/">Welcome , <span style="font-size: 20px;" class="text-primary">{{ user.first_name }} {{ user.last_name }}</span></a>
                 </li>
 
             {% else %}
@@ -91,8 +113,25 @@
 
 {% endblock %}
 
-<div class="fixed-bottom text-center text-white bg-dark" style="font-style: oblique;font-size: 1.5em; background-image: linear-gradient(to right, #0b0b0b ,#6a6565,#0b0b0b);">
-    This Site is Design and Maintain By Ravi Yadav
+<div class="fixed-bottom text-white bg-dark" style="font-style: oblique; background-image: linear-gradient(to right, #0b0b0b ,#0b0b0b,#0b0b0b);">
+
+        <div style="margin: 7px 0px;">
+            <center>
+        <span class="text-center">@Copyright</span>
+        <span class="text-center" style="font-size: 1em;" >Rajkiya Engineering College Banda</span>
+
+        <a href="https://www.facebook.com/tpcrecbanda/?ref=py_c" target="_blank" style="color:darkblue;">
+            <img src="{% static 'images/icons/facebook.png' %}" class="rounded-circle icon" height="40xp" width="40px">
+        </a>&nbsp;
+        <a href="https://twitter.com/iicrecbanda?lang=en" target="_blank">
+            <img src="{% static 'images/icons/twitter.png' %}" class="rounded-circle icon" height="40xp" width="40px">
+        </a>&nbsp;
+        <a href="https://www.youtube.com/channel/UCvnS9XoFEyJmakhAYn5DAnA" target="_blank" style="color:;">
+            <img src="{% static 'images/icons/youtube.png' %}" class="rounded-circle icon" height="40xp" width="40px">
+        </a>
+                </center>
+        </div>
+
 </div>
 
 
