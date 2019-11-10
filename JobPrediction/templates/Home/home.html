@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="{% static 'css/Home/home.css' %}">
+
+{% endblock %}
+
+{% block body %}
+    <div id="loading">
+
+    </div>
+    {% if pop is 1 %}
+        <div id="popUpMain" style="display: none">
+            <div id="popUp">
+                <h2 id="newsHeading">Welcome to Job Prediction</h2>
+                <p id="para">Here you can predict the chances of getting job</p>
+                <center>
+                    <button id="closeId" class="btn btn-success"> Close </button>
+                </center>
+            </div>
+        </div>
+    {% endif %}
+    {% if msg %}
+        <div id="popUpMain2">
+            <div id="popUp2">
+                <center><h2 id="newsHeading2">{{ msg }}</center>
+                <center>
+                    <button id="closeId2" class="btn btn-success"> Close </button>
+                </center>
+            </div>
+        </div>
+    {% endif %}
+    <div class="container">
+        <div class="text-white heading1 text-center text-primary text-uppercase"  id="job">
+            Job Prediction
+        </div>
+        <marquee class="text-white" scrollamount="5" behavior="alternate">Choose Your Dream Job</marquee>
+
+    </div>
+    <script src="{% static 'js/Home/home.js' %}"></script>
+{% endblock %}

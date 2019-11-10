@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <style>
+        #box{
+
+            height: 500px;
+            padding: 3px;
+            background-color: #1E90FF;
+            overflow: hidden;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="container text-white">
+
+
+        <div class="row">
+            <div class="col-sm-6" style="font-size:1em">
+                <h1 class="text-center" style="background-image: linear-gradient( to right , #56558a,#504f92 , #4c4ba0);border-radius: 5px" >Feedback Form</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ fform.as_p }}
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                </form>
+            </div><div class="offset-sm-2 col-sm-4 text-dark" >
+            <div id="box">
+                <h1>Feedbacks</h1>
+                <marquee direction="up" scrollamount="3" scrolldelay="-10" width="auto" height="495px" onmouseover="this.stop();" onmouseout="this.start();">
+                    <center>
+
+                    {% if feed %}
+                        {% for f in feed %}
+
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ f.name }}</h5>
+                                    <p class="card-text">{{ f.email }}</p>
+                                    <p class="card-text">{{ f.feedback }}</p>
+                                </div>
+                            </div>
+
+                            <br>
+                        {% endfor %}
+                    {% else %}
+                        <h4>No Record Found</h4>
+                    {% endif %}
+                    </center>
+
+                </marquee>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <br><br>
+
+{% endblock %}

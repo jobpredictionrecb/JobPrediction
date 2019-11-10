@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/Accounts/Login/login.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/Login/login.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% if msg %}
+        <div id="popUpMain">
+            <div id="popUp">
+                <h2 id="newsHeading">{{ msg }}</h2>
+                <center>
+                    <button id="closeId" class="btn btn-success"> Close </button>
+                </center>
+            </div>
+        </div>
+    {% endif %}
+    <div class="container" id="bd">
+        <div class="row">
+            <div class="offset-md-3 col-md-5 mt-5" id="frm" >
+                <form method="post">
+                    <h1 class="text-center">User Login</h1>
+                    {% csrf_token %}
+                    {{ lform }}<br>
+                    <center>
+                        <input type="submit" value="Login" class="btn btn-primary">&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="Clear" class="btn btn-danger">
+                    </center><br>
+                    <center>
+                        <a href="{% url 'accounts:register' %}">New User?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#">Forget Password?</a>
+                    </center>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/Login/login.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/Accounts/Login/login.css' %}">
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="container" id="bd">
+        <div class="row">
+            <div class="offset-md-3 col-md-5" id="frm">
+                <form method="post">
+                    <h1 class="text-center">User Registration</h1>
+                    {% csrf_token %}
+                    {{ rform }}<br>
+                    <center>
+                        <input type="submit" value="Register" class="btn btn-primary">&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="Clear" class="btn btn-danger">&nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'accounts:login' %}">Already Register?</a>
+                    </center><br>
+                    <center>
+
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+{% endblock %}

@@ -1,0 +1,67 @@
+
+#job{
+    font-size: 80px;
+    margin-top:13%;
+}
+marquee{
+    font-size: 40px;
+}
+
+#popUpMain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255 , 255, 0.9);
+    z-index : 1001;
+}
+#popUp{
+    width: 420px;
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url('../../images/bg-image1.jpg');
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 4px 4px 5px 3px;
+    color: white;
+}
+#newsHeading{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#para{
+    margin-top: 30px;
+    margin-bottom: 30px ;
+    margin-left: 30px;
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;/* Vertical Height */
+    background: #fff url('../../images/pre.gif') no-repeat center;
+    z-index: 112099999;
+}
+
+
+#popUpMain2{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255 , 255, 0.9);
+    z-index : 1001;
+}
+#popUp2{
+    width: 420px;
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url('../../images/bg-image1.jpg');
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 4px 4px 5px 3px;
+    color: white;
+}
+#newsHeading2{
+    margin-top: 20px;
+    margin-left: 20px;
+}

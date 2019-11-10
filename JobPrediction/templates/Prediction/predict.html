@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/ResumeBuilder/resume.css' %}" >
+
+{% endblock %}
+
+{% block body %}
+    <br>
+
+            <!--<form method="post">
+                <h1 class="text-center">SELECT YOUR SKILL</h1>
+                <hr>
+                <div class="container">
+                    <h2>Soft Skill</h2>
+                    <div class="row">
+                        <table id="dynamic_field" class="table table-bordered">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <select class="form-control" id="softskill" onchange="fun()">
+                                            <option>Select</option>
+                                            <option>Communication Skill</option>
+                                            <option>TimeManagement Skill</option>
+                                            <option>Problem Solving Skill</option>
+                                            <option>Leadership Skill</option>
+                                            <option>Self Confidence</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td  id="inherite11">
+                                </td>
+
+
+                                <td class="btn btn-primary" name="Add" id="add">
+                                    Add More
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h2>Hard Skill</h2>
+                    <div class="row">
+                        <table id="dynamic_field2" class="table table-bordered">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <select class="form-control" id="hardskill" onchange="fun2()">
+                                            <option>Select</option>
+                                            <option>Computer Technology</option>
+                                            <option>Data Analysis</option>
+                                            <option>Certification and Licenses</option>
+                                            <option>Marketing</option>
+                                            <option>Project Management</option>
+                                            <option>Design</option>
+                                            <option>Cloud Computing</option>
+                                            <option>Mobile and Web Development</option>
+                                            <option>Network Structure and Securitys</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td  id="inherite21">
+                                </td>
+                                <td class="btn btn-primary" name="Add" id="add2">
+                                    Add More
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr>
+                </div>
+            </form>-->
+            <script src="{% static 'js/Prediction/predict.js' %}">
+
+            </script>
+{% endblock %}

@@ -1,0 +1,48 @@
+<html>
+<style>
+    body {
+        font-weight: 200;
+        font-size: 14px;
+    }
+    .header {
+        text-align: center;
+    }
+    #header2{
+        font-size: 20px;
+        font-weight: 100;
+        float: left;
+    }
+
+    td {
+        padding: 2px;
+        text-align: left;
+    }
+</style>
+</html>
+<body>
+<div class='wrapper'>
+    <div class='header'>
+        <h1>Resume</h1>
+    </div>
+</div>
+<table style="width:100%">
+    <tr>
+        <td>Name:{{ fname }}&nbsp;{{ mname }}&nbsp;{{ lname }}</td>
+    </tr>
+    <tr>
+        <td>Email:{{ email }}</td>
+    </tr>
+    <tr>
+        <td>Mob No:{{ number }}</td>
+    </tr>
+    <tr>
+        <td>Link:{{ link }}</td>
+    </tr>
+</table>
+<hr>
+<h2>Career Objective</h2>
+<p>{{ career }}</p>
+<hr>
+<!--{{ images.photo.url}}-->
+
+</body>

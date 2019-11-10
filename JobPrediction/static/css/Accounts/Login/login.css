@@ -1,0 +1,9 @@
+#bd{
+            color: white;
+        }
+        #frm{
+        border-radius: 0px 25px 0px 25px;
+        border: 2px solid black;
+        background: url('../../../images/bg-image1.jpg');
+        box-shadow: -7px -7px 8px  #756D6D;
+    }

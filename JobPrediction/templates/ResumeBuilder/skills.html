@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ResumeBuilder/resume.css' %}">
+    <style>
+        #head{
+            background-image: linear-gradient(to right, #2c4a5a ,#2F4F4F, #708090,#778899);
+        }
+        #mybox{
+            width: 100%;
+        }
+        .arrow_box{
+            border: 3px solid black;
+            padding: 0 34px;
+            background-color: #2F4F4F;
+        }
+        .logo{
+            margin: 3px 0px;
+        }
+        .frmbox{
+            background-color: #DCDCDC;
+            color: black;
+            padding: 20px;
+        }
+        .adjustele{
+            margin: 0px 30px;
+        }
+        table.table-bordered{
+            border:1px solid black;
+            margin-top:20px;
+        }
+
+        table.table-bordered > tbody > tr > td{
+            border:1px solid black;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="text-center mt-2" id="head">
+        <h1 class="page-title" >Enter Your Personal Details</h1>
+    </div>
+    <div class="container" id="container" style="margin-top:2%">
+        <div class="row" id="mybox">
+            <div class="col-20" >
+                <div class='arrow_box join-button'>
+                    <button  class='logo text-primary'>Personal Details<i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+
+            <div class="col-20">
+                <div class='arrow_box'>
+                    <button class="logo mx-4 text-primary">Skills<i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+            <div class="col-20">
+                <div class='arrow_box'>
+                    <button class='logo'>Educational Qualification<i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+            <div class="col-20">
+                <div class='arrow_box'>
+                    <button class="logo mx-4">Project<i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+            <div class="col-20">
+                <div class='arrow_box'>
+                    <button class="logo mx-4">Certificate</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <form method="post" action="/resumebuilder/skill">
+        {% csrf_token %}
+        <div class="container frmbox skill">
+            <h2>Soft Skill</h2>
+            <div class="row">
+                <table id="dynamic_field" class="table table-bordered">
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <select class="form-control" id="softskill" onchange="fun()" name="soft-skill">
+                                    <option value="">Select</option>
+                                    <option value="Communication Skill">Communication Skill</option>
+                                    <option value="">TimeManagement Skill</option>
+                                    <option value="">Problem Solving Skill</option>
+                                    <option value="">Leadership Skill</option>
+                                    <option value="">Self Confidence</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  id="inherite11">
+                        </td>
+
+
+                        <td class="btn btn-primary" name="Add" id="add">
+                            Add More
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container frmbox skill">
+            <h2>Hard Skill</h2>
+            <div class="row">
+                <table id="dynamic_field2" class="table table-bordered">
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <select class="form-control" id="hardskill" onchange="fun2()">
+                                    <option value="">Select</option>
+                                    <option value="">Computer Technology</option>
+                                    <option value="">Data Analysis</option>
+                                    <option value="">Certification and Licenses</option>
+                                    <option value="">Marketing</option>
+                                    <option value="">Project Management</option>
+                                    <option value="">Design</option>
+                                    <option value="">Cloud Computing</option>
+                                    <option value="">Mobile and Web Development</option>
+                                    <option value="">Network Structure and Securitys</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  id="inherite21">
+                        </td>
+
+
+                        <td class="btn btn-primary" name="Add" id="add2">
+                            Add More
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+        </div>
+        <div class="row mt-2">
+            <div class="offset-sm-3 col-sm-3" >
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger">
+            </div>
+        </div>
+    </form>
+    <br><br>
+    <script src="{% static 'js/Prediction/predict.js' %}">
+
+    </script>
+{% endblock %}

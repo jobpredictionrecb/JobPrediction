@@ -1,0 +1,28 @@
+
+#popUpMain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255 , 255, 0.9);
+    z-index : 1001;
+}
+#popUp{
+    width: 420px;
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url('../../images/bg-image1.jpg');
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 4px 4px 5px 3px;
+    color: white;
+}
+#newsHeading{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#para{
+    margin-top: 30px;
+    margin-bottom: 30px ;
+    margin-left: 30px;
+}
